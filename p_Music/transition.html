@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transition演示1</title>
+    <style type="text/css">
+        .animated_div {
+            margin: 100px auto;
+            width:100px;
+            height:60px;
+            background:#92B901;
+            /*简写属性*/
+            -webkit-transition:-webkit-transform 1s,opacity 1s,background 1s,width 1s,height 1s,font-size 1s; /* Safari */
+            /*每个属性分开写*/
+            transition-property:width,height,transform,background,opacity;
+            transition-duration:1s,1s,1s,1s,1s,1s;
+            -webkit-border-radius:5px;
+            border-radius:5px;
+            opacity:0.4;
+        }
+        .animated_div:hover {
+            -moz-transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            transform: rotate(360deg);
+            opacity:1;
+            background:#1ec7e6;
+            width:200px;
+            height:120px;
+        }
+    </style>
+</head>
+<body>
+<div class="animated_div"></div>
+</body>
+</html>
